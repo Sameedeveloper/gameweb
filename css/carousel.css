@@ -134,7 +134,7 @@ video:hover {
 
 /* Just styling the content of the div, the *magic* in the previous rules */
 
-#ac-wrapper {
+.ac-wrapper {
   position: fixed;
   top: 0;
   left: 0;

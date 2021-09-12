@@ -1,4 +1,5 @@
 let items = document.querySelectorAll('.carousel .carousel-item')
+var count = 0
 
 items.forEach((el) => {
   const minPerSlide = 5
@@ -14,13 +15,18 @@ items.forEach((el) => {
   }
 })
 
-function PopUp(hideOrshow) {
-  if (hideOrshow == 'hide')
-    document.getElementById('ac-wrapper').style.display = 'none'
-  else document.getElementById('ac-wrapper').removeAttribute('style')
-}
-window.onload = function () {
-  setTimeout(function () {
-    PopUp('show')
-  }, 500)
-}
+$(document).ready(function () {
+  if (localStorage.getItem('popState') != 'shown') {
+    $('#popup').delay(2000).fadeIn()
+    localStorage.setItem('popState', 'shown')
+  }
+
+  $('#popup-close').click(function (
+    e // You are clicking the close button
+  ) {
+    $('#popup').fadeOut() // Now the pop up is hiden.
+  })
+  $('#popup').click(function (e) {
+    $('#popup').fadeOut()
+  })
+})
