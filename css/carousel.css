@@ -1,0 +1,131 @@
+@import url(//db.onlinewebfonts.com/c/0abeb2471faeb5269db428b9eac2075e?family=GT+Walsheim+Pro+Regular);
+
+@font-face {
+  font-family: GT;
+  src: url('//db.onlinewebfonts.com/t/0abeb2471faeb5269db428b9eac2075e.eot');
+  src: url('//db.onlinewebfonts.com/t/0abeb2471faeb5269db428b9eac2075e.eot?#iefix')
+      format('embedded-opentype'),
+    url('//db.onlinewebfonts.com/t/0abeb2471faeb5269db428b9eac2075e.woff2')
+      format('woff2'),
+    url('//db.onlinewebfonts.com/t/0abeb2471faeb5269db428b9eac2075e.woff')
+      format('woff'),
+    url('//db.onlinewebfonts.com/t/0abeb2471faeb5269db428b9eac2075e.ttf')
+      format('truetype'),
+    url('//db.onlinewebfonts.com/t/0abeb2471faeb5269db428b9eac2075e.svg#GT Walsheim Pro Regular')
+      format('svg');
+}
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.carousel-item {
+  backface-visibility: visible;
+}
+
+@media (max-width: 767px) {
+  .carousel-inner .carousel-item > div {
+    display: none;
+  }
+  .carousel-inner .carousel-item > div:first-child {
+    display: block;
+  }
+}
+
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+  display: flex;
+}
+
+/* medium and up screens */
+@media (min-width: 768px) {
+  .carousel-inner .carousel-item-end.active,
+  .carousel-inner .carousel-item-next {
+    transform: translateX(100%);
+  }
+
+  .carousel-inner .carousel-item-start.active,
+  .carousel-inner .carousel-item-prev {
+    transform: translateX(-100%);
+  }
+}
+
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start {
+  transform: translateX(0);
+}
+
+.hide-zoom {
+  min-height: 248px;
+}
+
+.zoomer {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.zoomer:hover {
+  overflow: hidden; /* hide the overflow */
+}
+
+.ofh {
+  overflow: hidden;
+}
+
+.checked {
+  color: #f4d754;
+}
+.ohshow {
+  display: none;
+  position: absolute;
+  top: 2%;
+}
+.ohshow:hover {
+  display: block;
+}
+
+.footertxt {
+  font-size: 24px;
+  line-height: 1.21;
+  color: #414143;
+}
+
+a {
+  text-decoration: none;
+  background-color: transparent;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  text-align: left;
+  font-family: GT;
+}
+
+a:hover {
+  color: #212529;
+}
+
+.signinbtn {
+  background-color: #f5634a;
+}
+
+.signinbtn:hover {
+  background-color: #da381c;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  object-fit: fill;
+  z-index: 0;
+}
+
+video:hover {
+  z-index: -10;
+}
+
+/* Just styling the content of the div, the *magic* in the previous rules */
